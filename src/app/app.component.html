@@ -1,4 +1,21 @@
 <div>
+  <h1>Mensaje Crudo</h1>
   <span>{{ message | json }}</span>
+</div>
+
+<hr>
+
+<div>
+  <h1>Products</h1>
+  <div *ngFor="let product of products">
+    <ul>
+      <li><b>Nombre:</b> {{product.name | uppercase}}</li>
+      <li><b>Precio:</b> {{product.price}}</li>
+      <li><b>Cantidad:</b> {{product.quantity}}</li>
+    </ul>
+  </div>
+  <div *ngIf="products.length == 0">
+    Cargando Productos...
+  </div>
 </div>
 

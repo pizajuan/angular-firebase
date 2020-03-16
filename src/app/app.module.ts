@@ -10,6 +10,8 @@ import { MessagingService } from './service/messaging.service';
 import { environment } from '../environments/environment';
 import { AsyncPipe } from '../../node_modules/@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { StorageService } from './service/storage.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
   ],
   providers: [
+    AngularFirestore,
     MessagingService,
+    StorageService,
     AsyncPipe
   ],
   bootstrap: [AppComponent]
